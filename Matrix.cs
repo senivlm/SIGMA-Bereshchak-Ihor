@@ -37,43 +37,8 @@ namespace Dz
      
         public IEnumerator GetEnumerator()
         {
-            return new Enumerator(data[][]);
+            return new Enumerator();
         }
-        class Enumerator : IEnumerator<Matrix>
-        {
-            int position = -1;
-            private double[,] data;
-
-            public Enumerator(Product[] products)
-            {
-                this.products = products;
-            }
-            public Product Current => products[position];
-
-            object IEnumerator.Current => products[position];
-
-            Matrix IEnumerator<Matrix>.Current => throw new NotImplementedException();
-
-            public void Dispose()
-            {
-
-            }
-
-            public bool MoveNext()
-            {
-                if (position + 2 < data[].Length)
-                {
-                    position += 2;
-                    return true;
-                }
-                return false;
-
-            }
-
-            public void Reset()
-            {
-                position = -1;
-            }
-        }
+        
     }
 }
