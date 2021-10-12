@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,11 @@ namespace Dz
     {
         private double[,] data;
 
+
         private int m;
+        private int rowPosition, columnPosition;
+
+        public object Current => data[rowPosition, columnPosition];
         public int M {
             get => this.m; set
             {
@@ -34,11 +38,28 @@ namespace Dz
             this.data = new double[m, n];
         }
 
-     
+
+
+        public bool MoveNext()
+        {
+            --columnPosition;
+            if (columnPosition < 0)
+            {
+                --rowPosition;
+                columnPosition = n - 1;
+            }
+            return rowPosition >= 0 && columnPosition >= 0;
+        }
+
+        public void Reset()
+        {
+            rowPosition = m- 1;
+            columnPosition = n;
+        }
+
         public IEnumerator GetEnumerator()
         {
-            return new Enumerator();
+            return (IEnumerator)this;
         }
-        
     }
 }
