@@ -110,45 +110,6 @@ namespace Dz
 
 
 
-       /* public void Parse(string s)
-        {
-            char[] separators = { '+' };
-            string[] monomial = s.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            if ((monomial.Length - 1 != s.Count(ch => ch == '^'))
-                ||
-                (monomial.Length - 1 != s.Count(ch => ch == '*')))
-            {
-                throw new FormatException("Invalid parameters\n");
-            }
-            separators = new char[] { '^' };
-            string[] sMonomial = monomial[monomial.Length - 1].Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            if (sMonomial.Length != 2)
-            {
-                throw new FormatException("Invalid parameters\n");
-            }
-
-            int tempDeegre = int.Parse(sMonomial[1]);
-            if (tempDeegre > polinomDegree) { cIndex = new double[tempDeegre + 1]; polinomDegree = tempDeegre; }
-            cIndex[0] = double.Parse(monomial[0]);
-            char[] separatorMult = new char[] { '*' };
-            int curDeegre;
-
-            for (int i = 1; i < monomial.Length; i++)
-            {
-                sMonomial = monomial[i].Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                if (sMonomial.Length != 2)
-                {
-                    throw new FormatException("Invalid parameters\n");
-                }
-                curDeegre = int.Parse(sMonomial[1]);
-                sMonomial = monomial[i].Split(separatorMult, StringSplitOptions.RemoveEmptyEntries);
-                if (sMonomial.Length != 2)
-                {
-                    throw new FormatException("Invalid parameters\n");
-                }
-                cIndex[curDeegre] = double.Parse(sMonomial[0]);
-            }
-
-        }*/
+       
     }
 }
