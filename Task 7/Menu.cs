@@ -9,7 +9,7 @@ namespace DZ7
 {
     struct Weightprice {
         public double weight;
-        public int price;
+        public double price;
         public void AddWeight(double temp)
         {
            this.weight =weight+ temp;
@@ -44,7 +44,7 @@ namespace DZ7
         }
 
 
-        public void Add(string filepath)
+        public void Add(string filepath,char k)
         {
 
             StreamReader reader = new StreamReader(filepath);
@@ -59,7 +59,7 @@ namespace DZ7
 
                     double temp;
                     int itemp;
-                    if (double.TryParse(words[1], out temp)) {
+                    if (k=='w'&& double.TryParse(words[1], out temp)) {
                         if (check(words[0]) == false)
                         {
                             Addnew(words[0], temp);
@@ -67,6 +67,17 @@ namespace DZ7
                         else
                         {
                             data[words[0]] = new Weightprice() {weight= data[words[0]].weight+temp,price= data[words[0]].price};
+                        }
+                    }
+                    else if(int.TryParse(words[1], out itemp) && k=='p')
+                    {
+                        if (check(words[0]) == false)
+                        {
+                           Addnew(words[0], itemp);
+                        }
+                        else
+                        {
+                            data[words[0]] = new Weightprice() { weight = data[words[0]].weight, price = data[words[0]].weight*itemp };
                         }
                     }
                     
@@ -91,7 +102,7 @@ namespace DZ7
 
             foreach (var item in data)
             {
-                result += item.Key+" "+item.Value.weight+'\n';
+                result += item.Key+" "+item.Value.weight+" "+item.Value.price+'\n';
             }
             return result;
         }
