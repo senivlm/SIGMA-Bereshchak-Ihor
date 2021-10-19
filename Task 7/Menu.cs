@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DZ7
-{
+{Цінник і меню мали б бути в різних файлах. І Треба було б реалізувати пошук за назвою.
     struct Weightprice {
         public double weight;
         public double price;
