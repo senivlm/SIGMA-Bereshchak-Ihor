@@ -19,7 +19,7 @@ namespace DZ7
             data.Add("school", "cinema");
         }
         public bool AddNew(string str)
-        {
+        {Цикл поки не введено слово.
             if (check(str) == false)
             {
                 string temp;
@@ -29,7 +29,7 @@ namespace DZ7
                 return true;
             }
             return false;
-        }
+        } Навіщо метод обгортка, який нічого не робить. Ви ним зовні не зможете скористататись 
         public bool check(string str)
         {
             return data.ContainsKey(str);
