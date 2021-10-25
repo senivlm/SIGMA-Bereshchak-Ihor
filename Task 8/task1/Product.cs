@@ -95,12 +95,12 @@ namespace task1
             return Name.GetHashCode() + Convert.ToInt32(Weight) + Convert.ToInt32(Price) + ExpirationDate + CreationTime.Day;
         }
 
-       /* public virtual void ChangePrice(double Percentage, (int, int, int) Koefs)
+        public virtual void ChangePrice(double Percentage, (int, int, int) Koefs)
         {           
 
             Price *= 1 + (Percentage / 100);
             Price = Math.Round(Price, 2);
-        }*/
+        }
 
         public override bool Equals(Object obj)
         {
@@ -123,51 +123,7 @@ namespace task1
         {
             return (Product)this.MemberwiseClone();
         }
-        /*
-    public virtual void Parse(string dataForParse)
-        {
-            string[] initialisationUnits = dataForParse.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-
-            if (initialisationUnits.Length != 5)
-            {
-                throw new Exception($"Impossible to initialise {this.GetType()} object - invalid string for parse");
-            }
-
-            this.Name = initialisationUnits[0];
-
-            try
-            {
-                this.Weight = Convert.ToInt32(initialisationUnits[1]);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Impossible to initialise {this.GetType()} object - invalid 'weight' parameter");
-            }
-            try
-            {
-                this.Price = Convert.ToDouble(initialisationUnits[2]);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Impossible to initialise {this.GetType()} object - invalid 'price' parameter");
-            }
-            try
-            {
-                this.ExpirationDate = Convert.ToInt32(initialisationUnits[3]);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Impossible to initialise {this.GetType()} object - invalid 'expiration date' parameter");
-            }
-            try
-            {
-                this.CreationTime = DateTime.Parse(initialisationUnits[4]);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Impossible to initialise {this.GetType()} object - invalid 'creation time' parameter");
-            }
-        }*/
+       
 
     }
 }
