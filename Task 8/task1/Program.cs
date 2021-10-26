@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace task1
 {
     class Program
-    {
+    {Що буде, якщо прийдуть різнотипові об'єкти?
         public static int SortByName(object firstObject, object secondObject)
         {
             Product product1 = (Product)firstObject;
