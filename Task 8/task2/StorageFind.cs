@@ -26,7 +26,7 @@ namespace task2
         }
 
         public static List<Product> FirstExceptSecond(Storage storage1, Storage storage2)
-        {
+        {Чому Наsh? А не надати користувачу задати можливість сортування об'єктів в множині? Множина тут точно потрібна.
             HashSet<Product> FirstStorage = new HashSet<Product>(storage1);
             HashSet<Product> SecondStorage = new HashSet<Product>(storage2);
 
