@@ -203,7 +203,7 @@ namespace task2
             }
 
             public bool MoveNext()
-            {
+            {треба було видаляти об'єкти
                 currentPosition++;
 
                 return currentPosition < listProducts.Count;
