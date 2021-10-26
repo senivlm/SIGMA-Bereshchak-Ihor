@@ -9,7 +9,7 @@ namespace task3
 {
     class EditString
     {
-
+Все збито в одну купу. Цей метод треба ділити. І не повнісю враховано умову задачі
         public static string MostBrackets(string filePath)
         {
             StreamReader sr =new StreamReader(filePath);
