@@ -120,7 +120,7 @@ namespace task
         public static void DeleteBadDairyProducts(object sender, string names)
         {
             string[] name = names.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
+// Проблемне місце. 1. Цей обробник мав би бути в іншому класі.2. При приведенні до типу треба перевіряти, чи можна привести за допомогою операції is
             Storage storage = (Storage)sender;
             for (int i = 0; i < name.Length; i++)
             {
